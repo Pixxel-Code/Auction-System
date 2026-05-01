@@ -1,0 +1,11 @@
+8|New bid of $10 placed on your item: hijjazi
+6|Congratulations! You won the auction for: hijjazi at $10
+8|Your item "hijjazi" was sold for $10
+6|RATE_REQUEST|seller|8|hijjazi
+8|RATE_REQUEST|buyer|6|hijjazi
+8|You received a new rating: 5.0/5
+8|New bid of $101 placed on your item: bike
+6|Congratulations! You won the auction for: bike at $101
+8|Your item "bike" was sold for $101
+6|RATE_REQUEST|seller|8|bike
+8|RATE_REQUEST|buyer|6|bike

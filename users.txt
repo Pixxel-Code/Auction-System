@@ -1,0 +1,6 @@
+1|admin|123|admin|5|1|
+6|ayesha|1234|buyer|5|1|
+8|anila|1234|seller|10|2|
+9|hussain|1234|buyer|0|0|
+10|anas|1234|buyer|5|1|3
+11|gujjar|1234|seller|5|1|

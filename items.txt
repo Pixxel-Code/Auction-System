@@ -1,0 +1,1 @@
+1|bike|100|101|8|Electronics|1|0|it is in good condition
