@@ -2,7 +2,8 @@
 #include "DBManager.h"
 #include "User.h"
 
-class AdminService {
+class AdminService 
+{
 public:
 
     // VIEW
@@ -10,7 +11,7 @@ public:
     static Item* getItems(int& count);
     static Bid* getBids(int& count);
 
-    // ADMIN ACTIONS (WITH ROLE CHECK)
+    // ADMIN ACTIONS (W ROLE CHECK)
     static bool deleteUser(int id, User currentUser);
     static bool deleteItem(int id, User currentUser);
     static bool rateUser(int raterId, int targetId, double rating);
