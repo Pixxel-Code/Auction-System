@@ -6,7 +6,7 @@
 
 bool AuthService::signup(string username, string password, string role)
 {
-
+//validations
     if (Validator::isEmpty(username)) {
         cout << "Username cannot be empty\n";
         return false;
@@ -21,7 +21,7 @@ bool AuthService::signup(string username, string password, string role)
         cout << "Invalid role - defaulting to buyer\n";
         role = "buyer";
     }
-
+//check admin 
     if (username == "admin") {
         role = "admin";
     }
