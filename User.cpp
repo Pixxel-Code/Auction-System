@@ -1,5 +1,5 @@
 #include "User.h"
-
+//constructor
 User::User() {
     id = 0;
     username = "";
@@ -9,7 +9,7 @@ User::User() {
     ratingCount = 0;
     watchlistData = "";
 }
-
+//parameterized
 User::User(int id, string u, string p, string r) {
     this->id = id;
     username = u;
@@ -20,6 +20,7 @@ User::User(int id, string u, string p, string r) {
     ratingCount = 0;
     watchlistData = "";
 }
+//rating check
 void User::addRating(double rating) {
     if (rating < 1.0) rating = 1.0;
     if (rating > 5.0) rating = 5.0;
