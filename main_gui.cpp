@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     db.loadBids();
     db.loadNotifications();
 
-    // Create default admin and users if no users exist
+    // Create default admin if no users exist
     int count = 0;
     db.getAllUsers(count);
     if (count == 0) {
