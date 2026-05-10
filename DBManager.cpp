@@ -44,7 +44,7 @@ void DBManager::addUser(User user) {
 
     userCount++;
 
-    saveUser(user);   // ✔ ONLY HERE
+    saveUser(user);   
 }
 User DBManager::getUser(const char* username) {
     for (int i = 0; i < userCount; i++) {
@@ -67,7 +67,7 @@ void DBManager::addItem(Item item) {
 
     itemCount++;
 
-    saveItem(item);   // ✔ ONLY HERE
+    saveItem(item);   
 }
 Item* DBManager::getAllItems(int& count) {//integrating 
     count = itemCount;
@@ -87,7 +87,7 @@ void DBManager::addBid(Bid bid) {
 
     bidCount++;
 
-    saveBid(bid);   // ✔ ONLY HERE
+    saveBid(bid);   
 }
 Bid* DBManager::getBidsForItem(int itemId, int& count) {
 
@@ -317,25 +317,20 @@ void DBManager::removeUserById(int id) {
 
     int newCount = 0;
 
-    // STEP 1: calculate new size (excluding target user)
     for (int i = 0; i < userCount; i++) {
         if (users[i].getId() != id)
             newCount++;
     }
 
-    // STEP 2: create new array
     User* temp = new User[newCount];
     int index = 0;
 
-    // STEP 3: copy all except the deleted user
     for (int i = 0; i < userCount; i++) {
         if (users[i].getId() != id) {
             temp[index] = users[i];
             index++;
         }
     }
-
-    // STEP 4: replace old memory
     delete[] users;
     users = temp;
     userCount = newCount;
