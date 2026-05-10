@@ -23,7 +23,7 @@ Item::Item(int id, string title, double base, int seller, string category, int d
     this->duration = durationSeconds;
     startTime = time(0);
     isActive = true;
-}
+}//validating and adding the items 
 void Item::updatePrice(double newPrice) {
     currentPrice = newPrice;
 }
