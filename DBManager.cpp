@@ -69,7 +69,7 @@ void DBManager::addItem(Item item) {
 
     saveItem(item);   // ✔ ONLY HERE
 }
-Item* DBManager::getAllItems(int& count) {
+Item* DBManager::getAllItems(int& count) {//integrating 
     count = itemCount;
     return items;
 }
@@ -108,7 +108,7 @@ Bid* DBManager::getBidsForItem(int itemId, int& count) {
     count = c;
     return result;
 }
-void DBManager::loadUsers() {
+void DBManager::loadUsers() {//loading user from database 
     delete[] users;
     users = nullptr;
     userCount = 0;
