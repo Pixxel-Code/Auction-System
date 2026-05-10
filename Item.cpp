@@ -30,7 +30,7 @@ void Item::updatePrice(double newPrice) {
 bool Item::isExpired() const {
     time_t now = time(0);
     return difftime(now, startTime) >= duration;
-}
+}//managing items 
 double Item::getCurrentPrice() { return currentPrice; }
 int Item::getId() { return id; }
 string Item::getTitle() { return title; }
