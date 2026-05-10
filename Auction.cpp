@@ -22,7 +22,7 @@ bool Auction::placeBid(Bid bid) {
         return false;
     }
 
-    if (bid.getAmount() <= item.getCurrentPrice()) {
+    if (bid.getAmount() <= item.getCurrentPrice()) {//comparing the amount of bid being placed 
         cout << "Bid too low\n";
         return false;
     }
@@ -68,7 +68,7 @@ Bid Auction::getHighestBid() {
 
     return highest;
 }
-void Auction::closeAuction() {
+void Auction::closeAuction() {//checking for the status of the bid 
     if (!isActive) return;
     isActive = false;
 
