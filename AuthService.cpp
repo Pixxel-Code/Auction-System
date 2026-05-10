@@ -7,7 +7,7 @@
 bool AuthService::signup(string username, string password, string role)
 {
 //validations
-    if (Validator::isEmpty(username)) {
+    if (Validator::isEmpty(username)) {//validating the input 
         cout << "Username cannot be empty\n";
         return false;
     }
@@ -22,7 +22,7 @@ bool AuthService::signup(string username, string password, string role)
         role = "buyer";
     }
 //check admin 
-    if (username == "admin") {
+    if (username == "admin") {//checking the user 
         role = "admin";
     }
 
@@ -39,7 +39,7 @@ bool AuthService::signup(string username, string password, string role)
     return true;
 }
 
-User AuthService::login(string username, string password) {
+User AuthService::login(string username, string password) {//loging in 
     User user = DBManager::getInstance().getUser(username.c_str());
 
     if (user.getUsername() == username && user.getPassword() == password) {
